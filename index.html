@@ -3,13 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portafolio Profesional</title>
+  <title>Fidel Acevedo - Portafolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
 
   <!-- Header -->
-  <header class="bg-white shadow">
+  <header class="bg-white shadow fixed w-full z-10">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Fidel Acevedo</h1>
       <nav class="space-x-4">
@@ -21,50 +42,79 @@
   </header>
 
   <!-- Hero -->
-  <section class="bg-blue-600 text-white py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4">Hola, soy Fidel</h2>
-      <p class="text-lg md:text-xl mb-6">Desarrollador Full Stack</p>
-      <a href="#proyectos" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Ver mis proyectos</a>
+  <section class="bg-blue-600 text-white pt-32 pb-20 text-center">
+    <div class="container mx-auto px-6">
+      <img src="https://pbs.twimg.com/profile_images/1915446829900029952/i2EBi9Wp_400x400.jpg" alt="Fidel Acevedo" class="mx-auto w-40 h-40 rounded-full shadow-lg border-4 border-white animate-fadeInUp delay-1">
+      <h2 class="text-4xl md:text-5xl font-bold mt-6 animate-fadeInUp delay-2">Hola, soy Fidel Acevedo</h2>
+      <p class="text-lg md:text-xl mt-4 animate-fadeInUp delay-3">Desarrollador Full Stack | Investigador en Ciberseguridad | Innovador Tecnológico</p>
+      <a href="#proyectos" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition animate-fadeInUp delay-4">Ver mis proyectos</a>
     </div>
   </section>
 
   <!-- Sobre mí -->
-  <section id="sobre-mi" class="py-16 bg-gray-100">
+  <section id="sobre-mi" class="py-20 bg-gray-100">
     <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-6">Sobre mí</h3>
-      <p class="text-gray-700 leading-relaxed">Soy un profesional orientado al futuro con experiencia en desarrollo de software, ciberseguridad y tecnologías emergentes. Me apasiona construir soluciones tecnológicas seguras, escalables y sostenibles.</p>
+      <h3 class="text-3xl font-bold mb-6 animate-fadeInUp">Sobre mí</h3>
+      <p class="text-gray-700 leading-relaxed mb-4 animate-fadeInUp delay-1">
+        Soy Fidel Acevedo, profesional paraguayo apasionado por la innovación tecnológica, el desarrollo de software y la seguridad informática.
+      </p>
+      <p class="text-gray-700 leading-relaxed animate-fadeInUp delay-2">
+        Me enfoco en construir soluciones seguras, escalables y orientadas al futuro. Desarrollo herramientas con impacto en el área de inteligencia artificial aplicada, ciberseguridad ofensiva y automatización.
+      </p>
     </div>
   </section>
 
   <!-- Proyectos -->
-  <section id="proyectos" class="py-16 bg-white">
+  <section id="proyectos" class="py-20 bg-white">
     <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-10">Proyectos destacados</h3>
+      <h3 class="text-3xl font-bold mb-10 animate-fadeInUp">Proyectos destacados</h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Proyecto 1 -->
-        <div class="bg-gray-100 p-6 rounded-lg shadow">
-          <h4 class="text-xl font-semibold mb-2">Nombre del Proyecto 1</h4>
-          <p class="text-gray-600 mb-4">Breve descripción del proyecto. Tecnologías utilizadas, objetivos y resultados.</p>
-          <a href="#" class="text-blue-600 hover:underline">Ver más →</a>
+
+        <!-- RAGDB -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow animate-fadeInUp delay-1">
+          <h4 class="text-xl font-semibold mb-2">RAGDB</h4>
+          <p class="text-gray-600 mb-4">
+            RAGDB es una base de datos contextual orientada a sistemas de recuperación aumentada por IA. Combina estructura y semántica para consultas inteligentes.
+          </p>
+          <a href="https://github.com/9inecode/RAGDB" target="_blank" class="text-blue-600 hover:underline">Ver en GitHub →</a>
         </div>
-        <!-- Agrega más proyectos según sea necesario -->
+
+        <!-- Bug Bounty Trainer -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow animate-fadeInUp delay-2">
+          <h4 class="text-xl font-semibold mb-2">Sistema Inteligente de Bug Bounty</h4>
+          <p class="text-gray-600 mb-4">
+            Plataforma automatizada con IA para descubrir vulnerabilidades web. Incluye generación de payloads, plantillas y reportes técnicos avanzados.
+          </p>
+          <span class="text-sm text-gray-500">Privado / en desarrollo</span>
+        </div>
+
+        <!-- Tava 360 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow animate-fadeInUp delay-3">
+          <h4 class="text-xl font-semibold mb-2">Tava 360: Turismo Inmersivo</h4>
+          <p class="text-gray-600 mb-4">
+            Proyecto XR que promueve el ecoturismo y la cultura paraguaya mediante realidad aumentada y virtual en sitios jesuíticos. Incluye energía solar y participación comunitaria.
+          </p>
+          <span class="text-sm text-gray-500">MVP en curso</span>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-6">Contacto</h3>
-      <p class="mb-4">¿Tienes una idea o quieres colaborar? Estoy disponible para oportunidades profesionales y proyectos innovadores.</p>
-      <p class="text-lg font-medium">📧 tu.email@dominio.com</p>
+  <section id="contacto" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6 animate-fadeInUp">Contacto</h3>
+      <p class="mb-4 animate-fadeInUp delay-1">Estoy abierto a colaboraciones, desafíos tecnológicos e investigaciones innovadoras.</p>
+      <p class="text-lg font-medium animate-fadeInUp delay-2">📧 <a href="mailto:acv2fidel@gmail.com" class="text-blue-600 hover:underline">acv2fidel@gmail.com</a></p>
+      <p class="text-lg font-medium mt-2 animate-fadeInUp delay-3">🐦 <a href="https://x.com/hav0kr" target="_blank" class="text-blue-600 hover:underline">@hav0kr</a></p>
+      <p class="text-sm text-gray-500 mt-4 animate-fadeInUp delay-4">Desde Paraguay 🇵🇾</p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white border-t mt-16 py-6 text-center text-sm text-gray-500">
-    © 2025 Tu Nombre. Todos los derechos reservados.
+  <footer class="bg-white border-t py-6 text-center text-sm text-gray-500">
+    © 2025 Fidel Acevedo. Todos los derechos reservados.
   </footer>
 
 </body>
